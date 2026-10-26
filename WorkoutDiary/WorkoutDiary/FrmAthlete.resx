@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="colEx.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colSets.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colReps.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="programExercisesViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="programViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>565, 17</value>
+  </metadata>
+  <metadata name="workoutDiaryDBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="materialLabel53.Text" xml:space="preserve">
+    <value>1.  Исходное: Лягте на спину, ноги согнуты в коленях, стопы на полу. Руки за головой или скрещены на груди.
+2.  Подъем: На выдохе напрягите мышцы живота и приподнимите верхнюю часть туловища от пола, отрывая лопатки.
+3.  Верхняя точка: Задержитесь на секунду, сохраняя напряжение в животе.
+4.  Опускание: На вдохе плавно вернитесь в исходное положение.
+5.  Контроль: Не тяните себя руками за шею, движение должно идти от мышц живота.</value>
+  </data>
+  <data name="materialLabel56.Text" xml:space="preserve">
+    <value> 1. исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. Хват шире плеч.
+2. снятие: Снять штангу над грудью.
+3. опускание: Медленно к нижней части груди, локти под 45-60 градусов. Касание груди.
+4. подъем: Мощно выжать вверх, руки выпрямить (не полностью).
+5 возврат: Плавно на стойки.
+</value>
+  </data>
+  <data name="materialLabel47.Text" xml:space="preserve">
+    <value>1.  Исходное: Встаньте прямо, ноги на ширине плеч. Штанга в руках, хват снизу (ладони вверх), руки на ширине плеч. Руки полностью выпрямлены.
+2.  Подъем: На выдохе согните руки в локтях, поднимая штангу к плечам. Держите локти прижатыми к корпусу.
+3.  Верхняя точка: В верхней точке напрягите бицепсы.
+4.  Опускание: На вдохе плавно опустите штангу в исходное положение, полностью выпрямляя руки.
+5.  Контроль: Избегайте раскачивания корпусом.</value>
+  </data>
+  <data name="materialLabel50.Text" xml:space="preserve">
+    <value> 1. исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. Хват шире плеч.
+2. снятие: Снять штангу над грудью.
+3. опускание: Медленно к нижней части груди, локти под 45-60 градусов. Касание груди.
+4. подъем: Мощно выжать вверх, руки выпрямить (не полностью).
+5 возврат: Плавно на стойки.
+</value>
+  </data>
+  <data name="materialLabel41.Text" xml:space="preserve">
+    <value>1.  Исходное: Встаньте лицом к блоку. Возьмитесь за рукоять (канатную или прямую), руки на ширине плеч, локти согнуты под углом 90 градусов, прижаты к корпусу.
+2.  Разгибание: На выдохе разгибайте руки вниз, напрягая трицепсы. Полностью выпрямите руки.
+3.  Опускание: На вдохе плавно верните рукоять в исходное положение, контролируя движение.
+4.  Контроль: Локти должны оставаться неподвижными.</value>
+  </data>
+  <data name="materialLabel44.Text" xml:space="preserve">
+    <value> 1. исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. Хват шире плеч.
+2. снятие: Снять штангу над грудью.
+3. опускание: Медленно к нижней части груди, локти под 45-60 градусов. Касание груди.
+4. подъем: Мощно выжать вверх, руки выпрямить (не полностью).
+5 возврат: Плавно на стойки.
+</value>
+  </data>
+  <data name="materialLabel35.Text" xml:space="preserve">
+    <value>1.  Исходное: Сядьте на скамью с опорой для спины. В каждой руке гантель на уровне плеч, ладони смотрят вперед.
+2.  Жим: На выдохе поднимите гантели вверх, сводя их над головой, но не касаясь друг друга. Полностью выпрямите руки.
+3.  Опускание: На вдохе плавно опустите гантели в исходное положение.
+4.  Контроль: Сохраняйте спину прямой, не прогибайтесь в пояснице.</value>
+  </data>
+  <data name="materialLabel38.Text" xml:space="preserve">
+    <value> 1. исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. Хват шире плеч.
+2. снятие: Снять штангу над грудью.
+3. опускание: Медленно к нижней части груди, локти под 45-60 градусов. Касание груди.
+4. подъем: Мощно выжать вверх, руки выпрямить (не полностью).
+5 возврат: Плавно на стойки.
+</value>
+  </data>
+  <data name="materialLabel29.Text" xml:space="preserve">
+    <value>1.  Исходное: Сядьте на платформу тренажера, спина плотно прижата к спинке. Ноги на ширине плеч на платформе, колени согнуты под углом 90 градусов.
+2.  Разгибание: На выдохе выжмите платформу вверх, полностью выпрямляя ноги, но не блокируя колени.
+3.  Сгибание: На вдохе плавно согните ноги, опуская платформу до касания с ограничителями или до угла 90 градусов в коленях.
+4.  Контроль: Движение должно быть подконтрольным, без рывков.</value>
+  </data>
+  <data name="materialLabel32.Text" xml:space="preserve">
+    <value> 1. исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. Хват шире плеч.
+2. снятие: Снять штангу над грудью.
+3. опускание: Медленно к нижней части груди, локти под 45-60 градусов. Касание груди.
+4. подъем: Мощно выжать вверх, руки выпрямить (не полностью).
+5 возврат: Плавно на стойки.
+</value>
+  </data>
+  <data name="materialLabel26.Text" xml:space="preserve">
+    <value>1.  Исходное: Встаньте, ноги на ширине плеч, колени слегка согнуты. Наклоните корпус вперед, сохраняя спину прямой, угол наклона примерно 45-60 градусов. Штанга перед собой, руки чуть шире плеч, хват сверху.
+2.  Опускание: Слегка согните руки в локтях и опустите штангу к нижней части живота или бедрам.
+3.  Тяга: На выдохе подтяните штангу к животу, сводя лопатки. Локти двигаются вдоль корпуса.
+4.  Опускание: На вдохе плавно опустите штангу в исходное положение, полностью выпрямляя руки.
+5.  Спина: Важно сохранять прямую спину на протяжении всего упражнения.</value>
+  </data>
+  <data name="materialLabel23.Text" xml:space="preserve">
+    <value>1.  Исходное: Встаньте, ноги на ширине плеч или чуть шире, носки немного развернуты. Штанга на верхней части спины (трапециях). Спина прямая, взгляд вперед.
+2.  Приседание: На вдохе начните приседать, отводя таз назад, как будто садитесь на стул. Колени следуют за носками. Опускайтесь до параллели бедер с полом или ниже.
+3.  Подъем: На выдохе мощно встаньте, выпрямляя ноги и отталкиваясь от пола.
+4.  Контроль: Движение должно быть контролируемым.</value>
+  </data>
+  <data name="materialLabel20.Text" xml:space="preserve">
+    <value> 1. исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. Хват шире плеч.
+2. снятие: Снять штангу над грудью.
+3. опускание: Медленно к нижней части груди, локти под 45-60 градусов. Касание груди.
+4. подъем: Мощно выжать вверх, руки выпрямить (не полностью).
+5 возврат: Плавно на стойки.
+</value>
+  </data>
+  <data name="materialLabel17.Text" xml:space="preserve">
+    <value>1.  Хват: Возьмитесь за перекладину широким или средним хватом сверху.
+2.  Начало: Начните движение из положения полного виса, руки полностью выпрямлены.
+3.  Подъем: Подтягивайтесь вверх, сгибая руки в локтях. Старайтесь коснуться перекладины грудью или подбородком. Лопатки сводятся.
+4.  Опускание: Плавно опуститесь в исходное положение, полностью выпрямляя руки.
+5.  Контроль: Движение должно быть контролируемым на всей амплитуде.</value>
+  </data>
+  <data name="materialLabel14.Text" xml:space="preserve">
+    <value>1.  Исходное: Лежа на скамье, ноги на полу, лопатки сведены, поясница прогнута. В руках гантели на уровне груди, ладони смотрят друг на друга.
+2.  Разведение: На вдохе медленно разводите руки с гантелями в стороны, сгибая локти. Движение контролируемое, не опускайте гантели ниже уровня плеч. Чувствуйте растяжение в грудных мышцах.
+3.  Сведение: На выдохе, сохраняя легкое сгибание в локтях, мощным движением сведениям руки с гантелями к центру груди. Сожмите грудные мышцы в верхней точке.
+4.  Повторение: Повторите движение заданное количество раз.</value>
+  </data>
+  <data name="materialLabel13.Text" xml:space="preserve">
+    <value>1.  Подготовка: Лягте на скамью, ноги плотно стоят на полу. Лопатки сведены и прижаты к скамье. Поясница слегка прогнута. Возьмитесь за гриф хватом чуть шире плеч.
+2.  Снятие штанги: Снимите штангу со стоек, переместив ее над грудью.
+3.  Опускание штанги: Медленно опускайте штангу к нижней части груди (примерно на уровне сосков). Локти двигаются под углом примерно 45-60 градусов к корпусу, не разводите их в стороны. Штанга должна коснуться груди или быть в миллиметрах от нее.
+4.  Подъем штанги: Мощным движением выжмите штангу вверх, выпрямляя руки. Движение должно быть контролируемым. Не выпрямляйте локти полностью в верхней точке, сохраняйте легкое напряжение.
+5.  Возврат: Плавно опустите штангу обратно на стойки.</value>
+  </data>
+  <metadata name="exercisesTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>203, 17</value>
+  </metadata>
+  <metadata name="workoutDiaryDBDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>379, 17</value>
+  </metadata>
+  <metadata name="programViewTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>767, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>961, 17</value>
+  </metadata>
+  <metadata name="programExercisesViewTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>266, 54</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>76</value>
+  </metadata>
+</root>

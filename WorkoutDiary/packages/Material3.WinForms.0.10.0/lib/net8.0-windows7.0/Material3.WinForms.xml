@@ -1,0 +1,2523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Material3.WinForms</name>
+    </assembly>
+    <members>
+        <member name="T:Material3.WinForms.Controls.MaterialBadge">
+            <summary>Standalone M3 badge: an Error-colored count pill, or an 8px dot in <see cref="P:Material3.WinForms.Controls.MaterialBadge.IsDot"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialBadge.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialBadge"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialBadge.Count">
+            <summary>Number rendered in the badge pill; clamped to non-negative.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialBadge.IsDot">
+            <summary>Renders a small dot instead of a count pill.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialBadge.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialButtonVariant">
+            <summary>The five M3 button styles.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialButtonVariant.Elevated">
+            <summary>A tinted surface lifted by a shadow.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialButtonVariant.Filled">
+            <summary>The primary fill, for the most important action.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialButtonVariant.Tonal">
+            <summary>The secondary container fill, between filled and outlined in emphasis.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialButtonVariant.Outlined">
+            <summary>An outline with no fill.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialButtonVariant.Text">
+            <summary>A label with no container, for the lowest emphasis.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialButton">
+            <summary>Pill-shaped owner-drawn M3 button; inherits <see cref="T:System.Windows.Forms.Button"/> so DialogResult / AcceptButton work.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialButton"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialButton.Variant">
+            <summary>The M3 button style: Elevated, Filled, Tonal, Outlined or Text.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.SetAccent(System.Drawing.Color,System.Drawing.Color)">
+            <summary>Overrides the container/fill accent with absolute colors; re-apply on theme change.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.ClearAccent">
+            <summary>Returns to theme-driven colors after a <see cref="M:Material3.WinForms.Controls.MaterialButton.SetAccent(System.Drawing.Color,System.Drawing.Color)"/> override.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialButton.Glyph">
+            <summary>Material Symbols key for the leading glyph (e.g. &quot;check&quot;). See MaterialIcons.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialButton.IconImage">
+            <summary>A caller-supplied leading icon, drawn as-is and taking precedence over <see cref="P:Material3.WinForms.Controls.MaterialButton.Glyph"/>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialButton.CornerRadius">
+            <summary>Corner radius in px; defaults to a full pill.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialButton.OutlineColor">
+            <summary>Override the outlined-variant border color. Null falls back to the scheme Outline.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnEnabledChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnSizeChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialButton.GetPreferredSize(System.Drawing.Size)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialCardVariant">
+            <summary>The three M3 card containers.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialCardVariant.Elevated">
+            <summary>SurfaceContainerLow tonal surface (the M3 surface-tint side of elevation).</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialCardVariant.Filled">
+            <summary>SurfaceContainerHighest, no border, no shadow.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialCardVariant.Outlined">
+            <summary>Surface with an OutlineVariant hairline (default).</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialCard">
+            <summary>Rounded Material 3 card. Pick the container style via <see cref="P:Material3.WinForms.Controls.MaterialCard.Variant"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCard.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialCard"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCard.#ctor(System.Int32)">
+            <summary>Creates a card with the given corner radius.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialCard.Variant">
+            <summary>The M3 card container style: elevated, filled or outlined.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCard.ApplyTheme">
+            <summary>Repaints the card from the current scheme; called on every theme change.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialCheckBox">
+            <summary>Material 3 checkbox with an animated check mark, optional label, and indeterminate state.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialCheckBox.CheckedChanged">
+            <summary>Raised when the check state changes.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialCheckBox"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialCheckBox.Checked">
+            <summary>Whether the box is checked.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialCheckBox.CheckState">
+            <summary>The check state: unchecked, checked or indeterminate.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.GetPreferredSize(System.Drawing.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnTextChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCheckBox.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialChipKind">
+            <summary>The four M3 chip kinds.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialChipKind.Assist">
+            <summary>Action helper next to content; not selectable.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialChipKind.Filter">
+            <summary>Selectable filter; shows a leading check while selected.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialChipKind.Input">
+            <summary>User-entered token with a trailing remove ✕; raises <see cref="E:Material3.WinForms.Controls.MaterialChip.Removed"/>.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialChipKind.Suggestion">
+            <summary>Suggested query/action; not selectable.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialChip">
+            <summary>Material 3 chip with label, optional leading icon, filter selection and input removal.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialChip.Pill">
+            <summary>Fully-rounded (pill) corners instead of the default 8 dp Small shape.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialChip.Removed">
+            <summary>Raised by input chips when the trailing ✕ is clicked. The host removes the control.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialChip.SelectedChanged">
+            <summary>Raised when a filter chip is selected or cleared.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialChip"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.SetAccent(System.Drawing.Color,System.Drawing.Color,System.Nullable{System.Drawing.Color})">
+            <summary>Overrides the theme-derived colors so the chip can carry a semantic role
+            (Warning, Error, Success, brand, …). Pass a transparent <paramref name="container"/>
+            with an <paramref name="outline"/> for an outlined accent chip.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.ClearAccent">
+            <summary>Returns to theme-driven colors after a <see cref="M:Material3.WinForms.Controls.MaterialChip.SetAccent(System.Drawing.Color,System.Drawing.Color,System.Nullable{System.Drawing.Color})"/> override.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialChip.Kind">
+            <summary>Chip kind (Assist, Filter, Input, Suggestion).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialChip.LeadingGlyph">
+            <summary>Material Symbols key shown before the label (hidden while a filter chip shows its check).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialChip.LeadingImage">
+            <summary>Caller-supplied leading icon drawn as-is, taking precedence over <see cref="P:Material3.WinForms.Controls.MaterialChip.LeadingGlyph"/> (the filter check still wins).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialChip.IsSelected">
+            <summary>Selection state; meaningful for <see cref="F:Material3.WinForms.Controls.MaterialChipKind.Filter"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnTextChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialChip.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialCircularProgress">
+            <summary>Material 3 circular progress indicator with determinate (<see cref="P:Material3.WinForms.Controls.MaterialCircularProgress.Value"/>) and indeterminate spinner modes.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCircularProgress.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialCircularProgress"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialCircularProgress.IsIndeterminate">
+            <summary>Spinning mode for unknown durations; ignores <see cref="P:Material3.WinForms.Controls.MaterialCircularProgress.Value"/>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialCircularProgress.Value">
+            <summary>Determinate progress in [0,100]; ignored while Indeterminate.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCircularProgress.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCircularProgress.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCircularProgress.OnHandleDestroyed(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCircularProgress.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialCircularProgress.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialDivider">
+            <summary>
+            M3 divider: a 1px OutlineVariant rule, horizontal or vertical, with optional inset.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDivider.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialDivider"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialDivider.IsVertical">
+            <summary>Vertical orientation (1px wide); default is a horizontal rule (1px tall).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialDivider.Inset">
+            <summary>Pixels trimmed from both ends — the M3 "inset divider" used inside lists.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDivider.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialDropdownSelect">
+            <summary>Inline dropdown select that grows its own height to reveal the option list rather than opening a popup window.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialDropdownSelect"/> class.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialDropdownSelect.SelectedIndexChanged">
+            <summary>Raised when a different option is picked.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialDropdownSelect.SelectedIndex">
+            <summary>The index of the picked option, or -1.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialDropdownSelect.SelectedTag">
+            <summary>The tag of the picked option, or null.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.ClearItems">
+            <summary>Removes every option.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.AddItem(System.String,System.Object)">
+            <summary>Appends an option showing <paramref name="displayText"/> and carrying <paramref name="tag"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.SelectByTag(System.Object)">
+            <summary>Selects the item whose tag equals <paramref name="tag"/>; returns false and keeps the current selection on a miss.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.OnResize(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialDropdownSelect.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialFabSize">
+            <summary>M3 FAB sizes.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialFabSize.Small">
+            <summary>40px.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialFabSize.Standard">
+            <summary>56px.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialFabSize.Large">
+            <summary>96px.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialFab">
+            <summary>Material 3 floating action button; set <see cref="P:System.Windows.Forms.Control.Text"/> for the extended (icon + label) variant.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialFab"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialFab.FabSize">
+            <summary>Size of the FAB (Small, Standard, Large).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialFab.Glyph">
+            <summary>Material Symbols key for the glyph.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialFab.IconImage">
+            <summary>Caller-supplied icon drawn as-is, taking precedence over <see cref="P:Material3.WinForms.Controls.MaterialFab.Glyph"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnTextChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialFab.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialIconButtonVariant">
+            <summary>The four M3 icon-button styles.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialIconButtonVariant.Standard">
+            <summary>A glyph with no container.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialIconButtonVariant.Filled">
+            <summary>A glyph on the primary fill.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialIconButtonVariant.Tonal">
+            <summary>A glyph on the secondary container fill.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialIconButtonVariant.Outlined">
+            <summary>A glyph inside an outline.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialIconButton">
+            <summary>Material 3 icon button; optionally a toggle (<see cref="P:Material3.WinForms.Controls.MaterialIconButton.IsToggle"/>) that swaps colors when selected.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialIconButton.CheckedChanged">
+            <summary>Raised when a toggle button is switched.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialIconButton"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialIconButton.Variant">
+            <summary>Visual style of the icon button (Standard, Filled, Tonal, Outlined).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialIconButton.Glyph">
+            <summary>Material Symbols key for the glyph.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialIconButton.IconImage">
+            <summary>Caller-supplied icon drawn as-is, taking precedence over <see cref="P:Material3.WinForms.Controls.MaterialIconButton.Glyph"/>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialIconButton.IsToggle">
+            <summary>When true the button latches and <see cref="P:Material3.WinForms.Controls.MaterialIconButton.Checked"/> flips on click.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialIconButton.Checked">
+            <summary>Toggle state of the button when IsToggle is enabled.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnEnabledChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialIconButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialLabel">
+            <summary>Drop-in <see cref="T:System.Windows.Forms.Label"/> replacement that owner-draws text via GDI+ with a controlled <see cref="T:System.Drawing.Text.TextRenderingHint"/>, staying consistent with the owner-drawn Material controls.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialLabel.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialLabel"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialLabel.GetPreferredSize(System.Drawing.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialLabel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialListItem">
+            <summary>Material 3 list item with leading slot, headline, optional supporting text and a trailing slot; one or two lines.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialListItem"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.Headline">
+            <summary>Primary line of the list item.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.SupportingText">
+            <summary>Second line; setting it switches the item to the 72px two-line layout.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.LeadingGlyph">
+            <summary>Material Symbols key for the leading slot (ignored when <see cref="P:Material3.WinForms.Controls.MaterialListItem.LeadingImage"/> is set).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.LeadingImage">
+            <summary>Custom image (e.g. an avatar) for the leading slot.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.TrailingGlyph">
+            <summary>Material Symbols key for the trailing slot.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.TrailingText">
+            <summary>Small trailing meta text (e.g. a timestamp); ignored when a trailing icon is set.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialListItem.IsSelected">
+            <summary>Highlights the row with the selection container color.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialListItem.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialMenu">
+            <summary>Lightweight Material 3 popup menu shown below an anchor or at a screen point; never steals activation.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialMenu.ItemClicked">
+            <summary>Raised with the item index after the popup closes from a click.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.AddItem(System.String,System.String,System.Action,System.String,System.Boolean)">
+            <summary>Appends a row with an optional glyph, action, shortcut hint and enabled state.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.AddSeparator">
+            <summary>Appends a divider.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.ClearItems">
+            <summary>Removes every row.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.Show(System.Windows.Forms.Control)">
+            <summary>Opens the menu below the anchor, left edges aligned.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.Show(System.Drawing.Point)">
+            <summary>Opens the menu at a screen location (e.g. cursor position for context menus).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.Close">
+            <summary>Closes the popup if open.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialMenu.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialOptionCard">
+            <summary>Selectable Material 3 option card: leading icon, title with optional accent suffix, description, trailing detail text and radio.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialOptionCard.SelectedChanged">
+            <summary>Raised when the user selects this card.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.Payload">
+            <summary>Free-form payload, like Control.Tag but typed by the caller's convention.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialOptionCard"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.String)">
+            <summary>Creates a card with a title, a description, an optional accent chip and an icon.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.IsSelected">
+            <summary>Whether the card is the selected one. Setting it does not raise <see cref="E:Material3.WinForms.Controls.MaterialOptionCard.SelectedChanged"/>, so a host can keep a group in sync.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.DetailText">
+            <summary>Right-aligned secondary text (a size, a date — whatever the list compares by).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.Title">
+            <summary>Primary line of the option.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.Description">
+            <summary>Secondary description line under the title.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.AccentSuffix">
+            <summary>Optional accent suffix shown after the title, e.g. &quot;recommended&quot;.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.SetAccentChip(System.String,System.Drawing.Color,System.Drawing.Color,System.Nullable{System.Drawing.Color},System.String)">
+            <summary>Shows a colored chip after the title (e.g. a Warning "needs update"). Independent
+            of <see cref="P:Material3.WinForms.Controls.MaterialOptionCard.AccentSuffix"/>; <see cref="M:Material3.WinForms.Controls.MaterialOptionCard.ClearAccentChip"/> removes the chip entirely.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.SetAccentChip(System.String,System.Func{System.Drawing.Color},System.Func{System.Drawing.Color},System.Func{System.Drawing.Color},System.String)">
+            <summary>Color-getter overload: pass theme roles (e.g. <c>() =&gt; MaterialColors.WarningContainer</c>)
+            so the chip re-reads them each paint and tracks light/dark and seed changes.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.ClearAccentChip">
+            <summary>Removes the accent chip.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.IconImage">
+            <summary>Leading icon image; overrides the fallback glyph when set.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialOptionCard.FallbackGlyph">
+            <summary>Material Symbols glyph drawn when no IconImage is set.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.SelectCard">
+            <summary>Selects the card and raises <see cref="E:Material3.WinForms.Controls.MaterialOptionCard.SelectedChanged"/>, as a click does.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialOptionCard.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialProgressBar">
+            <summary>Material 3 linear determinate progress indicator with a tweened fill; set <see cref="P:Material3.WinForms.Controls.MaterialProgressBar.Value"/> in [0,100].</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialProgressBar.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialProgressBar"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialProgressBar.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialProgressBar.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialProgressBar.Value">
+            <summary>Determinate progress in [0,100]; the painted fill tweens toward it.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialProgressBar.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialProgressBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialRadioButton">
+            <summary>Material 3 radio button; checking it unchecks sibling <see cref="T:Material3.WinForms.Controls.MaterialRadioButton"/>s, including ones nested in child containers.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialRadioButton.CheckedChanged">
+            <summary>Raised when the button is selected or cleared.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialRadioButton"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialRadioButton.Checked">
+            <summary>Whether the radio button is selected.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.GetPreferredSize(System.Drawing.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnTextChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRadioButton.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialRoundedButton">
+            <summary>Minimal rounded flat button driven by BackColor/hover colors, lighter than the full <see cref="T:Material3.WinForms.Controls.MaterialButton"/> pill.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialRoundedButton.HoverColor">
+            <summary>The fill shown under the pointer and while pressed.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedButton.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialRoundedButton"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedButton.#ctor(System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>Creates a button with the given corner radius, hover fill and border colour.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedButton.OnBackColorChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedButton.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedButton.OnResize(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialRoundedPanel">
+            <summary>Panel clipped to a rounded rectangle (HWND region) with an optional 1-px outline; base surface for cards and list items.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedPanel.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialRoundedPanel"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedPanel.#ctor(System.Int32)">
+            <summary>Creates a panel with the given corner radius.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialRoundedPanel.CornerRadius">
+            <summary>The corner radius, in 96-DPI pixels.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialRoundedPanel.OutlineColor">
+            <summary>The 1px outline colour; <see cref="P:System.Drawing.Color.Transparent"/> hides it.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedPanel.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedPanel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialRoundedPanel.OnSizeChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialScrollPanel">
+            <summary>Material You overlay scrollbar host: add content to <see cref="P:Material3.WinForms.Controls.MaterialScrollPanel.ContentPanel"/>; a pill thumb fades in over the right edge on overflow.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialScrollPanel.ContentPanel">
+            <summary>Host panel for scrollable content; add children here, not to the panel itself.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialScrollPanel.TrackWidth">
+            <summary>The width reserved for the overlay scrollbar, in 96-DPI pixels.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialScrollPanel"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnHandleDestroyed(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnResize(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.BeginContentUpdate">
+            <summary>Suspends the per-child relayout while a host bulk-adds content, then runs it once on
+            <see cref="M:Material3.WinForms.Controls.MaterialScrollPanel.EndContentUpdate"/>. Without this, every <c>Controls.Add</c> (and each child's
+            initial SizeChanged/LocationChanged) triggers a full relayout — O(n²) for a page of n controls.
+            Must be paired with <see cref="M:Material3.WinForms.Controls.MaterialScrollPanel.EndContentUpdate"/>; wrap the work in try/finally so an
+            exception mid-build can't leave layout permanently suspended.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.EndContentUpdate">
+            <summary>Ends a <see cref="M:Material3.WinForms.Controls.MaterialScrollPanel.BeginContentUpdate"/> batch; the outermost one lays the content out and repaints it once.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.ScrollToTop">
+            <summary>Reset scroll to the top — useful when host swaps content (e.g. step navigation).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialScrollPanel.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSearchBar">
+            <summary>Material 3 search bar: a pill field with leading icon, hosted editor and a clear button; raises <see cref="E:Material3.WinForms.Controls.MaterialSearchBar.QueryChanged"/> and <see cref="E:Material3.WinForms.Controls.MaterialSearchBar.QuerySubmitted"/>.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialSearchBar.QueryChanged">
+            <summary>Raised on every edit of the query.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialSearchBar.QuerySubmitted">
+            <summary>Raised when the user presses Enter.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialSearchBar"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSearchBar.Placeholder">
+            <summary>Hint text shown while the query is empty.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSearchBar.Query">
+            <summary>The current query text.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSearchBar.Editor">
+            <summary>The hosted editor, for advanced input scenarios.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnParentChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnSizeChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSearchBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSegmentedButton">
+            <summary>Material 3 segmented button: equal-width segments in one outlined pill; single-select unless <see cref="P:Material3.WinForms.Controls.MaterialSegmentedButton.MultiSelect"/> is set.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialSegmentedButton.SelectionChanged">
+            <summary>Raised when the selection changes.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialSegmentedButton"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSegmentedButton.MultiSelect">
+            <summary>Allows several segments to be active at once (filter-style).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.AddSegment(System.String)">
+            <summary>Appends a segment labelled <paramref name="text"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.ClearSegments">
+            <summary>Removes every segment.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSegmentedButton.SelectedIndex">
+            <summary>Index of the active segment in single-select mode (-1 when none).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSegmentedButton.SelectedIndices">
+            <summary>Active segment indices (useful with <see cref="P:Material3.WinForms.Controls.MaterialSegmentedButton.MultiSelect"/>).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.IsSelected(System.Int32)">
+            <summary>Whether the segment at <paramref name="index"/> is selected.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.SetSelected(System.Int32,System.Boolean)">
+            <summary>Selects or clears the segment at <paramref name="index"/>; in single-select mode selecting one clears the rest.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSegmentedButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSkeleton">
+            <summary>
+            A single shimmering skeleton block — the building piece for a loading placeholder. Size and
+            round it to a piece of your own content (a thin pill for a text line, a full-radius square for
+            an avatar, a large rounded rect for an image) and place several to match any layout, instead of
+            a fixed shape. <see cref="T:Material3.WinForms.Controls.MaterialSkeletonCard"/> is a ready-made list-item preset built from these.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSkeleton.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialSkeleton"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSkeleton.CornerRadius">
+            <summary>Corner radius in px; use half the height (or more) for a circle / pill.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSkeleton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSkeletonCard">
+            <summary>
+            Ready-made loading placeholder for a list/content card — an avatar block plus a title and two
+            short lines, mirroring an icon + two-line list item so the swap to real content feels in-place.
+            For any other layout, compose <see cref="T:Material3.WinForms.Controls.MaterialSkeleton"/> blocks yourself.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSkeletonCard.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialSkeletonCard"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSkeletonCard.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSlider">
+            <summary>Material 3 continuous slider: a draggable handle over an active/inactive track, reporting an integer <see cref="P:Material3.WinForms.Controls.MaterialSlider.Value"/> in [<see cref="P:Material3.WinForms.Controls.MaterialSlider.Minimum"/>, <see cref="P:Material3.WinForms.Controls.MaterialSlider.Maximum"/>].</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialSlider.ValueChanged">
+            <summary>Raised when the value changes.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialSlider"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSlider.Minimum">
+            <summary>The lower bound of the slider range.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSlider.Maximum">
+            <summary>The upper bound of the slider range.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSlider.IsAnimated">
+            <summary>When true, the handle eases toward the value; when false, it snaps immediately.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSlider.Value">
+            <summary>The current slider value within the range.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.IsInputKey(System.Windows.Forms.Keys)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSlider.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSnackbar">
+            <summary>Material 3 snackbar: a transient inverse-surface banner with an optional action; one per form, a new message replaces the current.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.Show(System.Windows.Forms.Form,System.String,System.Int32)">
+            <summary>Shows a message snackbar with no action.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.Show(System.Windows.Forms.Form,System.String,System.String,System.Action,System.Int32)">
+            <summary>Shows a snackbar with an action button.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.Dismiss">
+            <summary>Starts the dismiss animation (also called automatically after the timeout).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSnackbar.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialStepChecklist">
+            <summary>Vertical checklist of process stages: steps before <see cref="P:Material3.WinForms.Controls.MaterialStepChecklist.ActiveIndex"/> are completed, the active step spins, later steps are pending; active→done is animated.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialStepChecklist"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.SetSteps(System.String[])">
+            <summary>Replaces the steps and starts over with none done.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.SetError(System.Int32)">
+            <summary>Marks the step at <paramref name="index"/> as failed; earlier steps show done.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialStepChecklist.ActiveIndex">
+            <summary>Index of the in-progress step; earlier steps render as completed.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.Complete">
+            <summary>Marks every step done.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialStepChecklist.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialSwitch">
+            <summary>Material 3 switch: 52×32 track with an animated thumb that grows off→on, an optional label, toggled by click or Space.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialSwitch.CheckedChanged">
+            <summary>Raised when the switch is flipped.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialSwitch"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialSwitch.Checked">
+            <summary>Toggle state of the switch.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.GetPreferredSize(System.Drawing.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnTextChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialSwitch.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialTabVariant">
+            <summary>The two M3 tab styles.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialTabVariant.Primary">
+            <summary>Active indicator is a short rounded pill under the label.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialTabVariant.Secondary">
+            <summary>Active indicator underlines the full tab width.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialTabs">
+            <summary>Material 3 tab bar (bar only — pair with your own content switching via <see cref="E:Material3.WinForms.Controls.MaterialTabs.SelectedIndexChanged"/>); the active indicator slides between tabs.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialTabs.SelectedIndexChanged">
+            <summary>Raised when a different tab is selected.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialTabs"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTabs.Variant">
+            <summary>Active-indicator style: Primary (short pill) or Secondary (full-width underline).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTabs.SelectedIndex">
+            <summary>Index of the active tab; -1 when no tabs exist.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTabs.TabCount">
+            <summary>How many tabs the bar has.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.AddTab(System.String,System.String)">
+            <summary>Appends a tab with an optional glyph.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.ClearTabs">
+            <summary>Removes every tab.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnSizeChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTabs.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialTextFieldVariant">
+            <summary>The two M3 text-field containers.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialTextFieldVariant.Filled">
+            <summary>A tinted container with an indicator line along its bottom edge.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialTextFieldVariant.Outlined">
+            <summary>An outline whose top edge opens around the floated label.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialTextField">
+            <summary>Material 3 text field (filled or outlined) with floating label, icons, supporting text and error state, hosting a real borderless <see cref="T:System.Windows.Forms.TextBox"/> inside the painted chrome.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialTextField.TrailingGlyphClick">
+            <summary>Raised when the trailing icon is clicked (e.g. clear or visibility toggle).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialTextField"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.Variant">
+            <summary>The M3 text-field container: Filled or Outlined.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.LabelText">
+            <summary>Floating label shown inside the empty field and above the content when active.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.SupportingText">
+            <summary>Helper line under the field; replaced by <see cref="P:Material3.WinForms.Controls.MaterialTextField.ErrorText"/> while in error.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.ErrorText">
+            <summary>Message shown under the field while <see cref="P:Material3.WinForms.Controls.MaterialTextField.IsError"/> is true.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.IsError">
+            <summary>Puts the field into the error state (accent and ErrorText).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.LeadingGlyph">
+            <summary>Material Symbols key painted at the left edge (empty = none).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.TrailingGlyph">
+            <summary>Material Symbols key painted at the right edge (empty = none); clickable.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.Text">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.ReadOnly">
+            <summary>Makes the hosted editor read-only.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.UseSystemPasswordChar">
+            <summary>Masks input using the system password character.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.MaxLength">
+            <summary>Maximum number of characters the editor accepts.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTextField.Editor">
+            <summary>The hosted editor, for advanced scenarios (selection, input events).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnGotFocus(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnParentChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnMouseEnter(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnEnabledChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnSizeChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTextField.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialTitleBar">
+            <summary>Custom Material titlebar replacing the native caption: paint-only title on the left (one big drag target), caption buttons on the right; drag is delegated to the parent <see cref="T:Material3.WinForms.Forms.BorderlessForm"/>.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Controls.MaterialTitleBar.BarHeight">
+            <summary>The bar height, in 96-DPI pixels.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTitleBar.TitleText">
+            <summary>Caption text shown next to the app icon.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTitleBar.IconImage">
+            <summary>App icon shown at the left of the title bar; the control owns and disposes it.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTitleBar.ShowMinimize">
+            <summary>Modal dialogs set this false — they can't be minimized while parent is up.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTitleBar.ShowMaximize">
+            <summary>Shows the maximize/restore caption button; fixed-size forms set this false.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialTitleBar.ShowClose">
+            <summary>Shows the close caption button; set false for a window closed only programmatically.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialTitleBar"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.OnParentChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.OnResize(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.WndProc(System.Windows.Forms.Message@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTitleBar.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialTooltip">
+            <summary>Material 3 tooltips: attach with <see cref="M:Material3.WinForms.Controls.MaterialTooltip.SetTooltip(System.Windows.Forms.Control,System.String)"/> or <see cref="M:Material3.WinForms.Controls.MaterialTooltip.SetTooltip(System.Windows.Forms.Control,System.String,System.String)"/>; one shared popup appears after a hover delay and hides on leave/press/scroll.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTooltip.SetTooltip(System.Windows.Forms.Control,System.String)">
+            <summary>Attaches (or replaces) a plain one-line tooltip.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTooltip.SetTooltip(System.Windows.Forms.Control,System.String,System.String)">
+            <summary>Attaches a rich tooltip with a title and supporting text.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialTooltip.Remove(System.Windows.Forms.Control)">
+            <summary>Detaches the tooltip from a control.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.NavigationItem">
+            <summary>One destination in a navigation bar / rail / drawer.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.NavigationItem.#ctor(System.String,System.String)">
+            <summary>Creates a destination with a label and a Material Symbols glyph.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.NavigationItem.Label">
+            <summary>The text under or beside the glyph.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.NavigationItem.Glyph">
+            <summary>Material Symbols key.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.NavigationItem.BadgeCount">
+            <summary>Badge count rendered over the icon; 0 hides the badge, negatives show a dot.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialNavigationBase">
+            <summary>Shared selection/hover plumbing for the three navigation containers; subclasses supply geometry and painting.</summary>
+        </member>
+        <member name="E:Material3.WinForms.Controls.MaterialNavigationBase.SelectedIndexChanged">
+            <summary>Raised when a different destination is selected.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.OnDpiChangedAfterParent(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialNavigationBase.SelectedIndex">
+            <summary>Index of the active destination; -1 when there are no items.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.AddItem(System.String,System.String)">
+            <summary>Appends a destination.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.AddItem(Material3.WinForms.Controls.NavigationItem)">
+            <summary>Appends a destination.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.ClearItems">
+            <summary>Removes every destination.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialNavigationBase.Destinations">
+            <summary>The destinations, in order.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialNavigationBar">
+            <summary>Horizontal navigation bar (dock to the bottom): equal-width destinations with icon, label and an active pill.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBar.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialNavigationBar"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialNavigationRail">
+            <summary>Vertical navigation rail (dock to the left, 80px wide): icon pill + small label per destination.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationRail.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialNavigationRail"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationRail.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.MaterialNavigationDrawer">
+            <summary>Standard navigation drawer (dock to the left, 280px wide): full-width icon+label pills with an optional headline.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationDrawer.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Controls.MaterialNavigationDrawer"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Controls.MaterialNavigationDrawer.Headline">
+            <summary>Small section title above the destinations.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.MaterialNavigationDrawer.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Controls.SkeletonShimmer">
+            <summary>
+            Shared shimmer engine for skeleton placeholders: one process-wide timer drives a single global
+            phase so every skeleton on screen sweeps in sync and idle screens cost nothing. Used by both
+            <see cref="T:Material3.WinForms.Controls.MaterialSkeleton"/> and <see cref="T:Material3.WinForms.Controls.MaterialSkeletonCard"/>.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.SkeletonShimmer.Attach(System.Windows.Forms.Control)">
+            <summary>Repaints <paramref name="control"/> on every shimmer tick for the life of its
+            handle; the designer gets a static block (no runaway devenv timer).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Controls.SkeletonShimmer.DrawBlock(System.Drawing.Graphics,System.Windows.Forms.Control,System.Drawing.Rectangle,System.Int32)">
+            <summary>Fills a rounded block with the skeleton base and the moving highlight band.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Dpi">
+            <summary>
+            System-DPI scaling for owner-drawn geometry authored in 96-DPI px. Never Scale a size set in a
+            constructor — outer bounds are already scaled by AutoScaleMode, so that would double-scale.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Dpi.Scale(System.Windows.Forms.Control,System.Int32)">
+            <summary>Scales a length designed at 96 DPI to the DPI <paramref name="control"/> is shown at.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Dpi.Scale(System.Windows.Forms.Control,System.Single)">
+            <summary>Scales a length designed at 96 DPI to the DPI <paramref name="control"/> is shown at.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.AnimatedValue">
+            <summary>Shared exponential-ease scalar behind every owner-drawn control's tween (slider handle,
+            switch thumb, progress fill, check mark, floating label). Snaps instead of easing when
+            <see cref="P:Material3.WinForms.Tokens.Motion.AnimationsEnabled"/> or <see cref="P:Material3.WinForms.Drawing.AnimatedValue.Animated"/> is off, or the owner has no handle.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.AnimatedValue.#ctor(System.Windows.Forms.Control,System.Single,System.Single,System.Int32)">
+            <param name="owner">Control invalidated on every frame as the value eases.</param>
+            <param name="factor">Fraction of the remaining distance closed per frame (e.g. 0.25 ≈ M3 short4 at 60fps).</param>
+            <param name="threshold">Distance to the target at which the glide snaps and stops.</param>
+            <param name="intervalMs">Frame interval; 16 ms ≈ 60fps.</param>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.AnimatedValue.Current">
+            <summary>The current eased value — read this in OnPaint.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.AnimatedValue.Animated">
+            <summary>Per-instance switch on top of the global <see cref="P:Material3.WinForms.Tokens.Motion.AnimationsEnabled"/>; setting it false snaps.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.AnimatedValue.To(System.Single)">
+            <summary>Eases toward <paramref name="target"/>, or snaps if animation is off, no handle yet, or already within threshold.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.AnimatedValue.SnapTo(System.Single)">
+            <summary>Sets the target and jumps to it (design-time or a forced initial value).</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.ChipRenderer">
+            <summary>
+            Static painter for a Material 3 chip body — container, optional state layer, outline, leading
+            icon and label. Shared by <see cref="T:Material3.WinForms.Controls.MaterialChip"/> and owner-drawn hosts (cards that
+            paint chips inline) so the chip pixels live in one place instead of being re-implemented.
+            </summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.ChipRenderer.Metrics">
+            <summary>Caller-supplied, already-DPI-scaled geometry. <see cref="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.Font"/> is the label font.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.Height">
+            <summary>The chip height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.PadX">
+            <summary>The space at each end of the chip.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.IconPx">
+            <summary>The leading glyph size.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.IconGap">
+            <summary>The space between the glyph and the label.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.OutlineWidth">
+            <summary>The outline width.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.ChipRenderer.Metrics.Font">
+            <summary>The label font.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.ChipRenderer.Style">
+            <summary>Resolved colors for one paint. A transparent <see cref="P:Material3.WinForms.Drawing.ChipRenderer.Style.Container"/> draws no fill;
+            a null <see cref="P:Material3.WinForms.Drawing.ChipRenderer.Style.Outline"/> draws no border; a non-null <see cref="P:Material3.WinForms.Drawing.ChipRenderer.Style.StateOverlay"/> is laid
+            over the shape for hover/press.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.ChipRenderer.Style.#ctor(System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Nullable{System.Drawing.Color},System.Boolean,System.Nullable{System.Drawing.Color})">
+            <summary>Creates the colours a chip is painted with.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.ChipRenderer.Style.Container">
+            <summary>The fill.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.ChipRenderer.Style.Content">
+            <summary>The glyph colour.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.ChipRenderer.Style.Label">
+            <summary>The text colour.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.ChipRenderer.Style.Outline">
+            <summary>The outline colour, or null for none.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.ChipRenderer.Style.Pill">
+            <summary>Fully rounded ends instead of the 8px corner.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Drawing.ChipRenderer.Style.StateOverlay">
+            <summary>The hover or press layer painted over the fill, or null for none.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.ChipRenderer.ResolveAccent(System.Drawing.Color,System.Drawing.Color,System.Nullable{System.Drawing.Color},System.Boolean)">
+            <summary>Builds a chip <see cref="T:Material3.WinForms.Drawing.ChipRenderer.Style"/> from caller accent colors, applying a shared
+            disabled policy (an inert surface tone, no outline) so chip hosts don't each re-derive it.
+            Pass live theme roles for colors that should track the theme.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.ChipRenderer.Measure(System.Drawing.Graphics,System.String,System.Boolean,Material3.WinForms.Drawing.ChipRenderer.Metrics@)">
+            <summary>The width a chip needs for <paramref name="text"/>, with or without a leading glyph.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.ChipRenderer.Draw(System.Drawing.Graphics,System.String,System.String,System.Drawing.Image,Material3.WinForms.Drawing.ChipRenderer.Style@,Material3.WinForms.Drawing.ChipRenderer.Metrics@,System.Int32,System.Int32,System.Int32)">
+            <summary>Paints the chip body into <c>[x, y, width, Metrics.Height]</c>; returns the right edge
+            so inline hosts can chain chips. A non-null <paramref name="leadingImage"/> wins over
+            <paramref name="glyph"/>.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.MaterialIconRenderer">
+            <summary>
+            Renders embedded Material Symbols SVG icons to tinted bitmaps, cached by (key, size, color).
+            Returned <see cref="T:System.Drawing.Bitmap"/> instances are shared cache entries — callers must not dispose them.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.MaterialIconRenderer.Register(System.String,System.String)">
+            <summary>
+            Registers a consumer SVG under <paramref name="key"/> so <see cref="M:Material3.WinForms.Drawing.MaterialIconRenderer.Render(System.String,System.Int32,System.Drawing.Color)"/> renders it like a
+            bundled icon. Markup must use the grammar <see cref="T:Material3.WinForms.Drawing.SvgGlyph"/> supports (no arcs/gradients).
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.MaterialIconRenderer.Render(System.String,System.Int32,System.Drawing.Color)">
+            <summary>The glyph <paramref name="key"/> rendered at <paramref name="size"/> in <paramref name="color"/>, cached per combination.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.MaterialIcons">
+            <summary>Keys of the Material Symbols shipped as embedded resources.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.ArrowDropDown">
+            <summary>The Material Symbols <c>arrow_drop_down</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.ArrowForward">
+            <summary>The Material Symbols <c>arrow_forward</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Check">
+            <summary>The Material Symbols <c>check</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.CheckCircle">
+            <summary>The Material Symbols <c>check_circle</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.CheckCircleFilled">
+            <summary>The Material Symbols <c>check_circle_filled</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.CheckFilled">
+            <summary>The Material Symbols <c>check_filled</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.ChevronDown">
+            <summary>The Material Symbols <c>expand_more</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Close">
+            <summary>The Material Symbols <c>close</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Cloud">
+            <summary>The Material Symbols <c>cloud</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Copy">
+            <summary>The Material Symbols <c>content_copy</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.DeployedCode">
+            <summary>The Material Symbols <c>deployed_code</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Download">
+            <summary>The Material Symbols <c>download</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Error">
+            <summary>The Material Symbols <c>error</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.ErrorFilled">
+            <summary>The Material Symbols <c>error_filled</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Folder">
+            <summary>The Material Symbols <c>folder</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.FolderOpen">
+            <summary>The Material Symbols <c>folder_open</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Help">
+            <summary>The Material Symbols <c>help</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.HelpOutline">
+            <summary>The Material Symbols <c>help_outline</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Info">
+            <summary>The Material Symbols <c>info</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.InfoFilled">
+            <summary>The Material Symbols <c>info_filled</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Layers">
+            <summary>The Material Symbols <c>layers</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Maximize">
+            <summary>The Material Symbols <c>maximize</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Minimize">
+            <summary>The Material Symbols <c>minimize</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.OpenInNew">
+            <summary>The Material Symbols <c>open_in_new</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Play">
+            <summary>The Material Symbols <c>play_arrow</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.PlayFilled">
+            <summary>The Material Symbols <c>play_arrow_filled</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Restore">
+            <summary>The Material Symbols <c>restore</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.RadioChecked">
+            <summary>The Material Symbols <c>radio_button_checked</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.RadioUnchecked">
+            <summary>The Material Symbols <c>radio_button_unchecked</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Refresh">
+            <summary>The Material Symbols <c>refresh</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Search">
+            <summary>The Material Symbols <c>search</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.SearchOff">
+            <summary>The Material Symbols <c>search_off</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Settings">
+            <summary>The Material Symbols <c>settings</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Tips">
+            <summary>The Material Symbols <c>tips_and_updates</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.TravelExplore">
+            <summary>The Material Symbols <c>travel_explore</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.VideogameAsset">
+            <summary>The Material Symbols <c>videogame_asset</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.Warning">
+            <summary>The Material Symbols <c>warning</c> glyph.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Drawing.MaterialIcons.WarningFilled">
+            <summary>The Material Symbols <c>warning_filled</c> glyph.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.RoundedControlRenderer">
+            <summary>Rounded-rectangle path construction and outline painting shared by all controls.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.RoundedControlRenderer.GetFigurePath(System.Drawing.Rectangle,System.Int32)">
+            <summary>Closed rounded-rect path; radius clamps to half the smaller side (pill at Shape.Full).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.RoundedControlRenderer.DrawRoundedBorder(System.Drawing.Rectangle,System.Int32,System.Int32,System.Windows.Forms.PaintEventArgs,System.Windows.Forms.Control,System.Drawing.Color,System.Boolean,System.Boolean)">
+            <summary>Paints an anti-aliased rounded border and, unless told not to, clips the control's window region to the same shape.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.RoundedControlRenderer.PaintRoundedButtonBorder(System.Drawing.Rectangle,System.Int32,System.Int32,System.Windows.Forms.PaintEventArgs,System.Windows.Forms.Control,System.Drawing.Color)">
+            <summary>Paints a rounded border inside a button's surface without touching its window region.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Drawing.SvgGlyph">
+            <summary>
+            Minimal SVG-path → <see cref="T:System.Drawing.Drawing2D.GraphicsPath"/> parser: M/L/H/V/Q/T/C/S/Z (absolute + relative),
+            quadratic/cubic Béziers and the viewBox transform. No arcs, gradients, transforms or CSS.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Drawing.SvgGlyph.Parse(System.String)">
+            <summary>
+            Parses SVG text into a path in viewBox coordinates plus the viewBox rectangle, or null if
+            none found. FillMode is Winding (the SVG default).
+            </summary>
+        </member>
+        <member name="T:Material3.WinForms.WindowCornerPreference">
+            <summary>How the desktop compositor should round a window's corners (Windows 11 and later).</summary>
+        </member>
+        <member name="F:Material3.WinForms.WindowCornerPreference.Default">
+            <summary>Let the system decide.</summary>
+        </member>
+        <member name="F:Material3.WinForms.WindowCornerPreference.DoNotRound">
+            <summary>Never round.</summary>
+        </member>
+        <member name="F:Material3.WinForms.WindowCornerPreference.Round">
+            <summary>The full window radius.</summary>
+        </member>
+        <member name="F:Material3.WinForms.WindowCornerPreference.RoundSmall">
+            <summary>The smaller radius the system uses for menus and tooltips.</summary>
+        </member>
+        <member name="T:Material3.WinForms.DwmWindow">
+            <summary>Desktop Window Manager attributes: Windows 11 corner rounding and a caption painted in the current scheme.</summary>
+        </member>
+        <member name="P:Material3.WinForms.DwmWindow.IsSupported">
+            <summary>Whether this Windows build rounds windows at all. False on Windows 10 and earlier.</summary>
+        </member>
+        <member name="M:Material3.WinForms.DwmWindow.TrySetCornerPreference(System.IntPtr,Material3.WinForms.WindowCornerPreference)">
+            <summary>
+            Applies a corner preference to a window handle. Returns false when the build predates the attribute;
+            the corners then stay square, so a caller that does not care about the outcome can ignore it.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.DwmWindow.TrySetCornerPreference(System.Windows.Forms.Form,Material3.WinForms.WindowCornerPreference)">
+            <summary>Applies a corner preference to <paramref name="form"/>, creating its handle if needed.</summary>
+        </member>
+        <member name="M:Material3.WinForms.DwmWindow.ThemeCaption(System.Windows.Forms.Form)">
+            <summary>Paints the native caption in the current scheme and keeps it in sync with theme switches.</summary>
+        </member>
+        <member name="T:Material3.WinForms.FormAnimation">
+            <summary>Material 3 open/close motion for modal dialogs: top-down slide combined with opacity fade.</summary>
+        </member>
+        <member name="F:Material3.WinForms.FormAnimation.OpenDurationMs">
+            <summary>How long the open animation runs, in milliseconds.</summary>
+        </member>
+        <member name="F:Material3.WinForms.FormAnimation.CloseDurationMs">
+            <summary>How long the close animation runs, in milliseconds.</summary>
+        </member>
+        <member name="M:Material3.WinForms.FormAnimation.OpenAsync(System.Windows.Forms.Form)">
+            <summary>Fades <paramref name="form"/> in while it slides down into place. A newer animation on the same form cancels this one.</summary>
+        </member>
+        <member name="M:Material3.WinForms.FormAnimation.CloseAsync(System.Windows.Forms.Form)">
+            <summary>Fades <paramref name="form"/> out while it slides down. Close the form once the task completes.</summary>
+        </member>
+        <member name="T:Material3.WinForms.FormDragAnywhere">
+            <summary>Enables click-and-drag on any non-interactive part of a form, skipping interactive controls.</summary>
+        </member>
+        <member name="T:Material3.WinForms.FormDragAnywhere.IDragExcluded">
+            <summary>Controls implementing this are never treated as a drag surface.</summary>
+        </member>
+        <member name="M:Material3.WinForms.FormDragAnywhere.Enable(System.Windows.Forms.Form)">
+            <summary>Lets the user drag <paramref name="form"/> by any point that is not an interactive control.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Forms.BorderlessForm">
+            <summary>
+            Borderless form following the melak47/BorderlessWindow canonical pattern: WS_POPUP |
+            WS_THICKFRAME | WS_CAPTION give native resize/Aero-Snap with no visible frame (WS_CAPTION
+            stays for DWM behavior, NC area stripped by WM_NCCALCSIZE). Child controls forward
+            HTTRANSPARENT in form-owned zones so the native resize/drag loop still runs.
+            </summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.BorderlessForm.EnableEdgeResize">
+            <summary>Whether the edges resize the form.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.BorderlessForm.EnableDragAnywhere">
+            <summary>Whether the form can be dragged by any point that is not an interactive control.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.BorderlessForm.UseCompositedPainting">
+            <summary>
+            Opt in to <c>WS_EX_COMPOSITED</c>: composites the whole window (all children) into one
+            buffer so a theme switch or heavy recolor repaints in a single frame. Trade-off: parts of
+            the window can stay unpainted briefly after a restore from minimized. Off by default —
+            the form already double-buffers and redraws on resize without it.
+            </summary>
+        </member>
+        <member name="F:Material3.WinForms.Forms.BorderlessForm.ResizeBorderThickness">
+            <summary>The width of the resize zone along each edge, in 96-DPI pixels.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.BorderlessForm.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Forms.BorderlessForm"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.BorderlessForm.CreateParams">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.BorderlessForm.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.BorderlessForm.OnLoad(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.BorderlessForm.OnShown(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.BorderlessForm.WndProc(System.Windows.Forms.Message@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Forms.BorderlessForm.HitTestForwardingPanel">
+            <summary>
+            Panel that returns HTTRANSPARENT for WM_NCHITTEST in zones owned by the form
+            (edges, titlebar) — Windows then cascades the hit-test to the form, whose
+            DefWindowProc runs native resize/drag via WS_THICKFRAME. Use this for any
+            opaque child that covers the form's edge or caption area (typically the content wrap).
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.BorderlessForm.HitTestForwardingPanel.WndProc(System.Windows.Forms.Message@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Forms.CalendarMath">
+            <summary>
+            Pure date-grid math for the date picker, split out so the geometry-free logic is unit
+            testable without instantiating any UI.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.CalendarMath.FirstDayOffset(System.Int32,System.Int32,System.DayOfWeek)">
+            <summary>Zero-based column of the month's first day for a week starting on <paramref name="firstDayOfWeek"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.CalendarMath.DayAtCell(System.Int32,System.Int32,System.Int32,System.Int32,System.DayOfWeek)">
+            <summary>Day number (1-based) at a grid cell, or 0 when the cell is outside the month.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.CalendarMath.CellOfDay(System.Int32,System.Int32,System.Int32,System.DayOfWeek)">
+            <summary>Grid cell (row, column) of a day, for highlighting selection/today.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.CalendarMath.AddMonthsClamped(System.DateTime,System.Int32)">
+            <summary>Adds months while clamping the day to the target month's length (Jan 31 → Feb 28).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.CalendarMath.WeekdayHeaders(System.DayOfWeek,System.Globalization.CultureInfo)">
+            <summary>Localized single-letter weekday headers starting from <paramref name="firstDayOfWeek"/>.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Forms.MaterialDatePickerDialog">
+            <summary>
+            Material 3 date picker dialog (docked calendar): header with the formatted selection,
+            month navigation, a 7×6 day grid (today outlined, selection filled) and Cancel/OK
+            actions. Read <see cref="P:Material3.WinForms.Forms.MaterialDatePickerDialog.Value"/> after <c>ShowDialog() == DialogResult.OK</c>.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Forms.MaterialDatePickerDialog"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.#ctor(System.DateTime)">
+            <summary>Creates the picker showing the month of <paramref name="initial"/>, with that date selected.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDatePickerDialog.Value">
+            <summary>The picked date (valid when the dialog result is OK).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDatePickerDialog.CreateParams">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.OnLoad(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDatePickerDialog.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Forms.MaterialDialog">
+            <summary>
+            Reusable Material 3 basic dialog: leading icon, title, supporting text and right-aligned
+            text/filled actions on a rounded elevated surface (max-width 420, padding 24).
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Forms.MaterialDialog"/> class.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDialog.CreateParams">
+            <inheritdoc />
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDialog.Glyph">
+            <summary>The Material Symbols glyph above the title; empty shows none.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDialog.GlyphColor">
+            <summary>The colour of the glyph.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDialog.TitleText">
+            <summary>The headline.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDialog.BodyText">
+            <summary>The supporting text.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialDialog.ResultTag">
+            <summary>Set by the action whose <c>tag</c> overload was clicked.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.AddLink(System.String,System.String,System.Action)">
+            <summary>Adds a non-dismissing inline link button (e.g. "Open log", "Report an issue").</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.AddAction(System.String,System.Object,Material3.WinForms.Controls.MaterialButtonVariant,System.Drawing.Color,System.Drawing.Color)">
+            <summary>Action that carries a payload tag instead of relying on a standard DialogResult.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.AddAction(System.String,System.Windows.Forms.DialogResult,Material3.WinForms.Controls.MaterialButtonVariant,System.Drawing.Color,System.Drawing.Color)">
+            <summary>Appends an action button that closes the dialog with <paramref name="result"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.OnLoad(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.OnShown(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialDialog.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Forms.MaterialMessageBox">
+            <summary>Themed replacement for <see cref="T:System.Windows.Forms.MessageBox"/>: a <see cref="T:Material3.WinForms.Forms.MaterialDialog"/> with a role icon and actions.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialMessageBox.Info(System.Windows.Forms.IWin32Window,System.String,System.String,System.String)">
+            <summary>Shows an informational message with a single close button.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialMessageBox.Error(System.Windows.Forms.IWin32Window,System.String,System.String,System.String)">
+            <summary>Shows an error message with a single close button.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialMessageBox.Confirm(System.Windows.Forms.IWin32Window,System.String,System.String,System.String,System.String)">
+            <summary>Two-action confirm; returns true only when the confirm button is chosen.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Forms.MaterialTimePickerDialog">
+            <summary>
+            Material 3 time picker in input mode: two large hour/minute fields with an AM/PM column
+            (hidden for 24h cultures). Read <see cref="P:Material3.WinForms.Forms.MaterialTimePickerDialog.Value"/> after <c>ShowDialog() == OK</c>.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialTimePickerDialog.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Material3.WinForms.Forms.MaterialTimePickerDialog"/> class.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialTimePickerDialog.#ctor(System.TimeSpan)">
+            <summary>Creates the picker set to <paramref name="initial"/>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialTimePickerDialog.Value">
+            <summary>The picked time of day (valid when the dialog result is OK).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Forms.MaterialTimePickerDialog.CreateParams">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialTimePickerDialog.OnLoad(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialTimePickerDialog.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialTimePickerDialog.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Material3.WinForms.Forms.MaterialTimePickerDialog.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Material3.WinForms.Forms.TimeMath">
+            <summary>
+            Pure time-input normalization for <see cref="T:Material3.WinForms.Forms.MaterialTimePickerDialog"/>: clamps the typed
+            hour/minute into range and resolves the 12h AM/PM fields into a 24h <see cref="T:System.TimeSpan"/>.
+            Kept separate from the dialog so the midnight/noon edge cases are unit-testable.
+            </summary>
+        </member>
+        <member name="T:Material3.WinForms.MaterialCursors">
+            <summary>
+            Cursors loaded live from the OS via LoadCursor, so they follow the user's current cursor
+            scheme/size. The <see cref="T:System.Windows.Forms.Cursors"/> statics ship legacy baked-in bitmaps on .NET Framework
+            and ignore the user's scheme. Held static (never disposed) — they wrap shared OS handles.
+            </summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.Arrow">
+            <summary>Standard arrow.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.IBeam">
+            <summary>Text I-beam, for text-input controls.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.Wait">
+            <summary>Busy / hourglass.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.Cross">
+            <summary>Crosshair.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.UpArrow">
+            <summary>Vertical up-arrow.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.SizeNWSE">
+            <summary>Diagonal resize ↖↘.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.SizeNESW">
+            <summary>Diagonal resize ↗↙.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.SizeWE">
+            <summary>Horizontal resize ↔.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.SizeNS">
+            <summary>Vertical resize ↕.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.SizeAll">
+            <summary>Move / four-way resize.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.No">
+            <summary>Unavailable / "no drop".</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.Pointer">
+            <summary>Hand pointer, for clickable controls.</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.AppStarting">
+            <summary>Arrow with a small hourglass (background work starting).</summary>
+        </member>
+        <member name="F:Material3.WinForms.MaterialCursors.Help">
+            <summary>Arrow with a question mark.</summary>
+        </member>
+        <member name="M:Material3.WinForms.MaterialCursors.Apply(System.Windows.Forms.Control,System.Windows.Forms.Cursor)">
+            <summary>
+            Assigns a Material cursor at run time only. In the designer it's skipped: these wrap raw OS
+            handles that <see cref="T:System.ComponentModel.TypeConverter"/> for <see cref="T:System.Windows.Forms.Cursor"/>
+            can't serialize into InitializeComponent, which would otherwise break code generation for
+            any form hosting the control. Leaving the design-time cursor at its default avoids that.
+            </summary>
+        </member>
+        <member name="T:Material3.WinForms.MaterialThemeManager">
+            <summary>
+            Drop this non-visual component on a form to drive the global <see cref="T:Material3.WinForms.Theming.ThemeManager"/> from
+            the designer: set <see cref="P:Material3.WinForms.MaterialThemeManager.Seed"/>, <see cref="P:Material3.WinForms.MaterialThemeManager.Variant"/> and <see cref="P:Material3.WinForms.MaterialThemeManager.IsDark"/> in the
+            property grid. The theme applies at run time without a manual <c>ThemeManager.Apply</c> in
+            <c>Main</c>, and at design time it repaints the surface so the preview matches the run-time
+            palette instead of the default Platinum scheme.
+            </summary>
+        </member>
+        <member name="P:Material3.WinForms.MaterialThemeManager.Seed">
+            <summary>Seed color the whole M3 palette is generated from (HCT tonal palettes).</summary>
+        </member>
+        <member name="P:Material3.WinForms.MaterialThemeManager.Variant">
+            <summary>Tonal palette algorithm: TonalSpot (M3 default), Neutral, or Vibrant.</summary>
+        </member>
+        <member name="P:Material3.WinForms.MaterialThemeManager.IsDark">
+            <summary>Whether the dark color scheme is active.</summary>
+        </member>
+        <member name="T:Material3.WinForms.TaskbarProgress">
+            <summary>Mirrors long-running progress to the Windows taskbar button via ITaskbarList3 (Win7+), no-op where unavailable.</summary>
+        </member>
+        <member name="T:Material3.WinForms.TaskbarProgress.State">
+            <summary>The taskbar button's progress state.</summary>
+        </member>
+        <member name="F:Material3.WinForms.TaskbarProgress.State.None">
+            <summary>No progress shown.</summary>
+        </member>
+        <member name="F:Material3.WinForms.TaskbarProgress.State.Indeterminate">
+            <summary>A marquee: work is running with no known fraction.</summary>
+        </member>
+        <member name="F:Material3.WinForms.TaskbarProgress.State.Normal">
+            <summary>A green bar at the current value.</summary>
+        </member>
+        <member name="F:Material3.WinForms.TaskbarProgress.State.Error">
+            <summary>A red bar at the current value.</summary>
+        </member>
+        <member name="F:Material3.WinForms.TaskbarProgress.State.Paused">
+            <summary>A yellow bar at the current value.</summary>
+        </member>
+        <member name="M:Material3.WinForms.TaskbarProgress.SetValue(System.Windows.Forms.IWin32Window,System.Int32)">
+            <summary>Fills the taskbar button of <paramref name="owner"/> to <paramref name="percent"/>, clamped to 0â€“100.</summary>
+        </member>
+        <member name="M:Material3.WinForms.TaskbarProgress.SetState(System.Windows.Forms.IWin32Window,Material3.WinForms.TaskbarProgress.State)">
+            <summary>Switches the taskbar button of <paramref name="owner"/> to <paramref name="state"/>.</summary>
+        </member>
+        <member name="M:Material3.WinForms.TaskbarProgress.Clear(System.Windows.Forms.IWin32Window)">
+            <summary>Removes any progress from the taskbar button of <paramref name="owner"/>.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Theming.ArgbExtensions">
+            <summary>Conversions between <see cref="T:Material3.Core.Argb"/> and GDI+ colours.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Theming.ArgbExtensions.ToGdi(Material3.Core.Argb)">
+            <summary>Converts to a GDI+ colour.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Theming.ArgbExtensions.ToCore(System.Drawing.Color)">
+            <summary>
+            Converts to an <see cref="T:Material3.Core.Argb"/>. Not <c>ToArgb</c>: GDI+ <see cref="T:System.Drawing.Color"/> has an instance method of that
+            name, and an instance method always wins over an extension.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Theming.ArgbExtensions.Overlay(System.Drawing.Color,System.Drawing.Color,System.Double)">
+            <summary>Composites a translucent state layer over a solid base: an M3 hover, press or disabled fill.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Theming.MaterialColors">
+            <summary>
+            Shorthand for the current scheme's roles. Read these at paint time (never cache in fields)
+            so a theme switch is picked up by the next repaint.
+            </summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Primary">
+            <summary>The accent for the most prominent fills, active states and key actions.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnPrimary">
+            <summary>Text and icons on <c>Primary</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.PrimaryContainer">
+            <summary>A tinted fill for elements that need less emphasis than <c>Primary</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnPrimaryContainer">
+            <summary>Text and icons on <c>PrimaryContainer</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.InversePrimary">
+            <summary>The primary accent on <c>InverseSurface</c>, such as a snackbar action.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Secondary">
+            <summary>A quieter accent for less prominent components.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSecondary">
+            <summary>Text and icons on <c>Secondary</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SecondaryContainer">
+            <summary>The fill of selected and tonal components, such as a selected segment or a tonal button.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSecondaryContainer">
+            <summary>Text and icons on <c>SecondaryContainer</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Tertiary">
+            <summary>A contrasting accent that balances primary and secondary or draws attention to an element.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnTertiary">
+            <summary>Text and icons on <c>Tertiary</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.TertiaryContainer">
+            <summary>A tinted fill in the tertiary accent.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnTertiaryContainer">
+            <summary>Text and icons on <c>TertiaryContainer</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Error">
+            <summary>Error states: invalid input, a destructive action, a failed step.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnError">
+            <summary>Text and icons on <c>Error</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.ErrorContainer">
+            <summary>A tinted fill for error messages and destructive tonal actions.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnErrorContainer">
+            <summary>Text and icons on <c>ErrorContainer</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Success">
+            <summary>Success states. A library extension: the M3 scheme defines no success role.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSuccess">
+            <summary>Text and icons on <c>Success</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SuccessContainer">
+            <summary>A tinted fill for success messages.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSuccessContainer">
+            <summary>Text and icons on <c>SuccessContainer</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Warning">
+            <summary>Warning states. A library extension: the M3 scheme defines no warning role.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnWarning">
+            <summary>Text and icons on <c>Warning</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.WarningContainer">
+            <summary>A tinted fill for warning messages.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnWarningContainer">
+            <summary>Text and icons on <c>WarningContainer</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Surface">
+            <summary>The page background.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceDim">
+            <summary>The darkest surface tone, in the light scheme and the dark one alike.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceBright">
+            <summary>The brightest surface tone, in the light scheme and the dark one alike.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceContainerLowest">
+            <summary>The lowest-emphasis container fill.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceContainerLow">
+            <summary>A low-emphasis container fill, such as an elevated card.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceContainer">
+            <summary>The default container fill, such as a navigation rail or a filled card.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceContainerHigh">
+            <summary>A high-emphasis container fill, such as a menu or a dialog.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceContainerHighest">
+            <summary>The highest-emphasis container fill, such as a text field.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.InverseSurface">
+            <summary>A surface that contrasts with <c>Surface</c>, for a snackbar or a plain tooltip.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.InverseOnSurface">
+            <summary>Text and icons on <c>InverseSurface</c>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSurface">
+            <summary>Primary text and icons on any surface.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSurfaceVariant">
+            <summary>Secondary text and icons on any surface.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OnSurfaceMuted">
+            <summary>Tertiary text, dimmer than <c>OnSurfaceVariant</c>. A library extension.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Outline">
+            <summary>Boundaries that carry meaning, such as a text field outline.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.OutlineVariant">
+            <summary>Decorative boundaries, such as dividers and card outlines.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.SurfaceTint">
+            <summary>The colour elevation tints a surface with; <c>Primary</c> in M3.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Scrim">
+            <summary>The dimming layer behind a modal.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.MaterialColors.Shadow">
+            <summary>The colour of elevation shadows.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Theming.DesignTime">
+            <summary>
+            Whether code is running inside the Visual Studio form designer. Controls use this to skip
+            runtime-only wiring (theme subscriptions, animation timers) that would misbehave or run
+            away in the designer process.
+            </summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.DesignTime.Active">
+            <summary>True while a control is being constructed/edited by the WinForms designer.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Theming.ThemeManager">
+            <summary>
+            Global theme state: the current <see cref="T:Material3.Core.MaterialTheme"/> and light/dark mode. Controls read
+            colors via <see cref="P:Material3.WinForms.Theming.ThemeManager.Scheme"/> at paint time, so a switch only needs to trigger a repaint.
+            </summary>
+        </member>
+        <member name="E:Material3.WinForms.Theming.ThemeManager.ThemeChanged">
+            <summary>Raised after the theme or mode changes; controls repaint with the new scheme.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.ThemeManager.Theme">
+            <summary>The active theme (both schemes).</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.ThemeManager.IsDark">
+            <summary>Whether the dark scheme is active. Switching repaints all subscribed controls.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Theming.ThemeManager.Scheme">
+            <summary>The active color scheme — single source of truth for every control.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Theming.ThemeManager.Apply(Material3.Core.MaterialTheme,System.Boolean)">
+            <summary>Sets theme and mode in one transaction (one repaint instead of two).</summary>
+        </member>
+        <member name="T:Material3.WinForms.Theming.ThemeHook">
+            <summary>
+            Connects a control to <see cref="E:Material3.WinForms.Theming.ThemeManager.ThemeChanged"/> for the lifetime of its
+            window handle. Subscribing on HandleCreated and unsubscribing on HandleDestroyed (rather
+            than ctor/Dispose) survives handle-recreation cycles and never leaks: a control whose
+            handle is gone cannot paint anyway.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Theming.ThemeHook.Attach(System.Windows.Forms.Control,System.Action)">
+            <summary>
+            Calls <paramref name="applyTheme"/> on every theme change while the control has a handle,
+            and once immediately if it already exists. A second Attach on the same control is a no-op.
+            </summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.Elevation">
+            <summary>
+            M3 elevation levels 0–5. Elevation has two visual ingredients in this library:
+            a surface tint (primary composited over the surface at a per-level opacity — the M2-style
+            tonal elevation that M3 retains for tinted surfaces) and a painted soft shadow (WinForms
+            has no compositor, so shadows are drawn as concentric translucent rounded strokes).
+            </summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Elevation.TintOpacity">
+            <summary>Surface-tint opacity per level (0–5), per the M3 spec.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Elevation.ShadowAlpha">
+            <summary>Max alpha of the shadow's innermost ring per level.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Tokens.Elevation.TintedSurface(System.Drawing.Color,System.Int32)">
+            <summary>The surface color at the given elevation level (tint composited over base).</summary>
+        </member>
+        <member name="M:Material3.WinForms.Tokens.Elevation.ShadowMargin(System.Int32)">
+            <summary>Margin a control must reserve around its surface so the painted shadow fits.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Tokens.Elevation.PaintShadow(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Int32)">
+            <summary>
+            Paints a soft shadow around <paramref name="surfaceRect"/> (the rect the surface itself
+            will be drawn into). The caller must have reserved <see cref="M:Material3.WinForms.Tokens.Elevation.ShadowMargin(System.Int32)"/> px around
+            that rect, otherwise the shadow clips at the control bounds.
+            </summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.Motion">
+            <summary>
+            M3 motion tokens: durations and easing curves. Easings are cubic-bezier definitions
+            evaluated with the same Newton-Raphson approach CSS engines use, so timing matches
+            web/Android implementations of the spec.
+            </summary>
+        </member>
+        <member name="P:Material3.WinForms.Tokens.Motion.AnimationsEnabled">
+            <summary>Master switch for control animations — handle/thumb/fill tweens, switch and checkbox
+            glides, the indeterminate spinner. Set false for reduced-motion or deterministic tests; controls
+            then snap straight to their target instead of easing. Default true.
+            <para>Read on the UI thread at each animation frame: turning it off settles any in-flight glide
+            on the next frame. Turning it back on resumes easing on the next state change (an idle control
+            won't restart on its own), so set it before animations begin if you can.</para></summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Short1">
+            <summary>The M3 <c>Short1</c> duration, 50 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Short2">
+            <summary>The M3 <c>Short2</c> duration, 100 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Short3">
+            <summary>The M3 <c>Short3</c> duration, 150 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Short4">
+            <summary>The M3 <c>Short4</c> duration, 200 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Medium1">
+            <summary>The M3 <c>Medium1</c> duration, 250 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Medium2">
+            <summary>The M3 <c>Medium2</c> duration, 300 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Medium3">
+            <summary>The M3 <c>Medium3</c> duration, 350 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Medium4">
+            <summary>The M3 <c>Medium4</c> duration, 400 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Long1">
+            <summary>The M3 <c>Long1</c> duration, 450 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Long2">
+            <summary>The M3 <c>Long2</c> duration, 500 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Long3">
+            <summary>The M3 <c>Long3</c> duration, 550 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Long4">
+            <summary>The M3 <c>Long4</c> duration, 600 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.ExtraLong1">
+            <summary>The M3 <c>ExtraLong1</c> duration, 700 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.ExtraLong2">
+            <summary>The M3 <c>ExtraLong2</c> duration, 800 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.ExtraLong3">
+            <summary>The M3 <c>ExtraLong3</c> duration, 900 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.ExtraLong4">
+            <summary>The M3 <c>ExtraLong4</c> duration, 1000 ms.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Standard">
+            <summary>For a move that starts and ends on screen.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.StandardDecelerate">
+            <summary>For an element entering the screen.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.StandardAccelerate">
+            <summary>For an element leaving the screen for good.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.EmphasizedDecelerate">
+            <summary>For an emphasized element entering the screen.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.EmphasizedAccelerate">
+            <summary>For an emphasized element leaving the screen.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Motion.Linear">
+            <summary>For a change that should not ease, such as a colour fade.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.CubicBezier">
+            <summary>
+            A cubic-bezier timing function with control points (P1, P2); endpoints are fixed at
+            (0,0) and (1,1) as in CSS <c>cubic-bezier()</c>.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Tokens.CubicBezier.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Creates the curve through (0,0), the two control points and (1,1), as CSS <c>cubic-bezier()</c> does.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Tokens.CubicBezier.Evaluate(System.Double)">
+            <summary>Maps linear progress t (0–1) onto the eased progress (0–1).</summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.Shape">
+            <summary>
+            Layout, spacing, shape and component-size tokens — the single source of truth instead of
+            magic numbers. Values are device-independent pixels at 96 DPI; pair with Form.AutoScaleMode
+            for high-DPI.
+            </summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.ExtraSmall">
+            <summary>Extra small corner, 4px: text fields, small badges.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.Small">
+            <summary>Small corner, 8px: chips, menus, snackbars.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.Medium">
+            <summary>Medium corner, 12px: cards.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.Large">
+            <summary>Large corner, 16px: navigation drawers, sheets.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.LargeIncreased">
+            <summary>Large increased corner, 20px.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.ExtraLarge">
+            <summary>Extra large corner, 28px: dialogs.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Shape.Full">
+            <summary>Pill / stadium shape — effective radius clamps to half the smaller side.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.Spacing">
+            <summary>4-px spacing grid plus the paddings shared by the stock controls.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space1">
+            <summary>4px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space2">
+            <summary>8px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space3">
+            <summary>12px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space4">
+            <summary>16px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space5">
+            <summary>20px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space6">
+            <summary>24px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Space8">
+            <summary>32px on the 4px spacing grid.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.WindowBody">
+            <summary>The padding of a window's content area.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Card">
+            <summary>The padding inside a card.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.ListItem">
+            <summary>The padding of a list row.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.Spacing.Dialog">
+            <summary>The padding inside a dialog.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.ComponentSizes">
+            <summary>Default component dimensions (px @96 DPI).</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.ButtonHeight">
+            <summary>A button's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.ButtonHeightSmall">
+            <summary>A compact button's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.TextButtonHeight">
+            <summary>A text button's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.ChipHeight">
+            <summary>A status chip's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.AssistChipHeight">
+            <summary>An interactive chip's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.ListItemMinHeight">
+            <summary>The least height of a one-line list row. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.DropdownHeight">
+            <summary>A dropdown field's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.LinearProgressHeight">
+            <summary>The thickness of a linear progress bar. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.DialogMaxWidth">
+            <summary>The widest a dialog grows. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.TitleBarHeight">
+            <summary>A title bar's height. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.IconExtraSmall">
+            <summary>The smallest glyph size. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.IconSmall">
+            <summary>A small glyph size. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.IconMedium">
+            <summary>The glyph size inside buttons and fields. In 96-DPI pixels.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.ComponentSizes.IconLarge">
+            <summary>The standard 24px glyph size. In 96-DPI pixels.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Tokens.StateLayers">
+            <summary>
+            M3 state-layer opacities: a translucent layer of the content color composited over the
+            container while the state is active. Use with <see cref="M:Material3.WinForms.Theming.ArgbExtensions.Overlay(System.Drawing.Color,System.Drawing.Color,System.Double)"/>.
+            </summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.StateLayers.Hover">
+            <summary>State-layer opacity under the pointer.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.StateLayers.Focus">
+            <summary>State-layer opacity on keyboard focus.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.StateLayers.Pressed">
+            <summary>State-layer opacity while pressed.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.StateLayers.Dragged">
+            <summary>State-layer opacity while dragged.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.StateLayers.DisabledContainer">
+            <summary>Container opacity for disabled fills (12% of OnSurface over the parent).</summary>
+        </member>
+        <member name="F:Material3.WinForms.Tokens.StateLayers.DisabledContent">
+            <summary>Content opacity for disabled text/icons (38% of OnSurface).</summary>
+        </member>
+        <member name="T:Material3.WinForms.Typography.TextStyle">
+            <summary>
+            One entry of the M3 type scale: the WinForms font plus the metrics GDI+ cannot express
+            in a <see cref="P:Material3.WinForms.Typography.TextStyle.Font"/> (letter spacing, line height).
+            </summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TextStyle.Font">
+            <summary>The font (family, size, weight) for the style.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TextStyle.LetterSpacing">
+            <summary>Tracking in px @96 DPI. GDI+ has no tracking; apply via <see cref="M:Material3.WinForms.Typography.TypeScale.DrawString(System.Drawing.Graphics,System.String,Material3.WinForms.Typography.TextStyle,System.Drawing.Color,System.Drawing.PointF)"/>.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TextStyle.LineHeight">
+            <summary>Spec line height in px @96 DPI — use for row heights and multi-line layout.</summary>
+        </member>
+        <member name="T:Material3.WinForms.Typography.TypeScale">
+            <summary>
+            Full Material 3 type scale (15 styles) on Segoe UI. Sizes follow the spec's dp values
+            converted to points (pt = dp × 0.75) so the on-screen pixel size matches the intended
+            dp size at 96 DPI. "Medium" weights map to Segoe UI Semibold — the closest stock weight.
+            </summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.DisplayLargeStyle">
+            <summary>The largest display text, for a hero number or a short headline. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.DisplayMediumStyle">
+            <summary>Medium display text. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.DisplaySmallStyle">
+            <summary>Small display text. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.HeadlineLargeStyle">
+            <summary>The largest headline. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.HeadlineMediumStyle">
+            <summary>A medium headline. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.HeadlineSmallStyle">
+            <summary>A small headline. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.TitleLargeStyle">
+            <summary>A large title, such as a page or dialog title. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.TitleMediumStyle">
+            <summary>A medium title, such as a card title. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.TitleSmallStyle">
+            <summary>A small title, such as a section label. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.BodyLargeStyle">
+            <summary>Large body text. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.BodyMediumStyle">
+            <summary>The default body text. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.BodySmallStyle">
+            <summary>Small body text, such as a caption. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.LabelLargeStyle">
+            <summary>Button and tab labels. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.LabelMediumStyle">
+            <summary>Medium labels. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.LabelSmallStyle">
+            <summary>Small labels, such as a badge. With its letter spacing and line height.</summary>
+        </member>
+        <member name="F:Material3.WinForms.Typography.TypeScale.OverlineStyle">
+            <summary>An all-caps eyebrow above a title. A library extension. With its letter spacing and line height.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.DisplayLarge">
+            <summary>The font of the largest display text, for a hero number or a short headline.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.DisplayMedium">
+            <summary>The font of medium display text.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.DisplaySmall">
+            <summary>The font of small display text.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.HeadlineLarge">
+            <summary>The font of the largest headline.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.HeadlineMedium">
+            <summary>The font of a medium headline.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.HeadlineSmall">
+            <summary>The font of a small headline.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.TitleLarge">
+            <summary>The font of a large title, such as a page or dialog title.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.TitleMedium">
+            <summary>The font of a medium title, such as a card title.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.TitleSmall">
+            <summary>The font of a small title, such as a section label.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.BodyLarge">
+            <summary>The font of large body text.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.BodyMedium">
+            <summary>The font of the default body text.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.BodySmall">
+            <summary>The font of small body text, such as a caption.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.LabelLarge">
+            <summary>The font of button and tab labels.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.LabelMedium">
+            <summary>The font of medium labels.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.LabelSmall">
+            <summary>The font of small labels, such as a badge.</summary>
+        </member>
+        <member name="P:Material3.WinForms.Typography.TypeScale.Overline">
+            <summary>The font of an all-caps eyebrow above a title. A library extension.</summary>
+        </member>
+        <member name="M:Material3.WinForms.Typography.TypeScale.DrawString(System.Drawing.Graphics,System.String,Material3.WinForms.Typography.TextStyle,System.Drawing.Color,System.Drawing.PointF)">
+            <summary>
+            Draws a single line applying the style's letter spacing. GDI+ cannot track glyphs, so
+            spaced text is laid out per-character; styles with zero spacing take the fast path.
+            </summary>
+        </member>
+        <member name="M:Material3.WinForms.Typography.TypeScale.MeasureString(System.Drawing.Graphics,System.String,Material3.WinForms.Typography.TextStyle)">
+            <summary>Single-line width including letter spacing.</summary>
+        </member>
+    </members>
+</doc>
